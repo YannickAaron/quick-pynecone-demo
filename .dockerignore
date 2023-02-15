@@ -1,0 +1,16 @@
+.gitlab
+.vscode
+.yarn-cache
+coverage
+dist
+docs
+.eslintrc
+.lintstagedrc.js
+.nvmrc
+.yarnrc
+docker-compose.yml
+jest.config.js
+*.md
+renovate.json
+typedoc.json
+node_modules

@@ -1,0 +1,71 @@
+{
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "cSpell.language": "en,de",
+  "cSpell.words": [
+    "Chakra",
+    "cobertura",
+    "dotenv",
+    "hookform",
+    "interruptible",
+    "mypy",
+    "octocat",
+    "owasp",
+    "pickone",
+    "pino",
+    "postgis",
+    "postgres",
+    "prefetch",
+    "pylint",
+    "pytest",
+    "rabbitmq",
+    "Semver",
+    "superjson",
+    "tada",
+    "trpc",
+    "tsdoc",
+    "upsert",
+    "venv"
+  ],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "i18n-ally.enabledFrameworks": ["next-translate"],
+  "i18n-ally.keepFulfilled": true,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["locales"],
+  "i18n-ally.namespace": true,
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.sourceLanguage": "de",
+  "jupyter.jupyterServerType": "local",
+  "mypy.configFile": "./mypy.ini",
+  "mypy.runUsingActiveInterpreter": true,
+  "python.defaultInterpreterPath": "./.venv/bin/python",
+  "python.formatting.provider": "black",
+  "python.testing.pytestEnabled": true
+}

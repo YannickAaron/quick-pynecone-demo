@@ -1,28 +1,29 @@
 [tool.poetry]
-name = "default"
+name = "pynecone-demo"
 version = "0.1.0"
 description = ""
-authors = ["Yannick Aaron Lehr <yannick.lehr@ioki.com>"]
+authors = ["Yannick Aaron Lehr <me@yannickaaron.io>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pynecone = "^0.1.16"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.1.3"
-pre-commit = "^2.20.0"
-pylint = "^2.15.3"
-black = "^22.8.0"
-isort = "^5.10.1"
-pytest-cov = "^3.0.0"
-coverage = "^6.4.4"
-ipykernel = "^6.15.3"
+pytest = "^7.2.1"
+pre-commit = "^3.0.4"
+pylint = "^2.16.2"
+black = "^23.1.0"
+isort = "^5.12.0"
+pytest-cov = "^4.0.0"
+coverage = "^7.1.0"
+ipykernel = "^6.21.2"
 ipynbname = "^2021.3.2"
-notebook = "^6.4.12"
+notebook = "^6.5.2"
 toml = "^0.10.2"
-nbqa = "^1.5.1"
-pyupgrade = "^2.38.2"
-mypy = "^0.971"
-ipywidgets = "^8.0.2"
+nbqa = "^1.6.1"
+pyupgrade = "^3.3.1"
+mypy = "^1.0.0"
+ipywidgets = "^8.0.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

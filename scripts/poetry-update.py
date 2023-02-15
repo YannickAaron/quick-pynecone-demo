@@ -53,7 +53,7 @@ with open("pyproject.toml", encoding="utf-8") as f:
 
     # Get dependencies
     dependencies = pyproject["tool"]["poetry"]["dependencies"]
-    dev_dependencies = pyproject["tool"]["poetry"]["dev-dependencies"]
+    dev_dependencies = pyproject["tool"]["poetry"]["group"]["dev"]["dependencies"]
 
     # update dependencies
     print("Updating dependencies")

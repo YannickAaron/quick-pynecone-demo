@@ -2,8 +2,6 @@
 MainTest
 """
 
-from lib import calculator
-
 
 def main() -> None:
     """
@@ -15,4 +13,3 @@ def main() -> None:
 # protects users from accidentally invoking the script when they didn't intend to. Nothing will happend on an import.
 if __name__ == "__main__":
     main()
-    print(calculator.add(1, 2))

@@ -2,6 +2,8 @@
 """Welcome to Pynecone! This file outlines the steps to create a basic app."""
 from pcconfig import config
 
+from datetime import datetime
+
 import pynecone as pc
 
 
@@ -14,15 +16,22 @@ class Message(pc.Model, table=True):
 class State(pc.State):
     count: int = 0
 
+    username: str = ""
+    message: str = ""
+    timestamp: str = ""
+
     messages: list[Message] = []
 
     def pressed(self):
         self.count += 1
 
     def add_message(self):
-        with pc.session() as session:
-            session.add(Message(username="Test2", message="Test3", timestamp="Test4"))
-            self.messages = session.query(Message).all()
+        if self.username != "" or self.message != "":
+            self.timestamp = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+            with pc.session() as session:
+                session.add(Message(username=self.username, message=self.message, timestamp=self.timestamp))
+                session.commit()
+        self.get_messages()
 
     def get_messages(self):
         with pc.session() as session:
@@ -54,15 +63,32 @@ def index() -> pc.Component:
                     "color": "rgb(107,99,246)",
                 },
             ),
-            pc.button(
-                "Add message",
-                border="0.1em solid",
-                padding="0.5em",
-                border_radius="0.5em",
-                on_click=State.add_message,
-                _hover={
-                    "color": "rgb(107,99,246)",
-                },
+            pc.vstack(
+                pc.input(
+                    # Setting the initial value of the input.
+                    placeholder="Username",
+                    on_blur=State.set_username,
+                    border="0.1em solid",
+                    padding="0.5em",
+                    border_radius="0.5em",
+                ),
+                pc.input(
+                    placeholder="Message",
+                    on_blur=State.set_message,
+                    border="0.1em solid",
+                    padding="0.5em",
+                    border_radius="0.5em",
+                ),
+                pc.button(
+                    "Add message",
+                    border="0.1em solid",
+                    padding="0.5em",
+                    border_radius="0.5em",
+                    on_click=State.add_message,
+                    _hover={
+                        "color": "rgb(107,99,246)",
+                    },
+                ),
             ),
             pc.foreach(
                 State.messages,
